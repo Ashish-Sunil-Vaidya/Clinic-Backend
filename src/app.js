@@ -14,7 +14,8 @@ const app = express()
 import { openapi } from "../openapi.js" 
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || "*"
+    origin: process.env.CORS_ORIGIN || "*",
+    credentials:true
 }));
 
 app.use(express.json({ limit: "16kb" }));
