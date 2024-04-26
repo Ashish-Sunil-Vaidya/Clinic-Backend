@@ -14,12 +14,12 @@ const app = express()
 import { openapi } from "../openapi.js"
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN || "*",
+    origin:  "*",
     credentials: true
 }));
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://main--sparkly-moonbeam-be963d.netlify.app/login');
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
     next();
 });
